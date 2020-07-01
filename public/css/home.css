@@ -1,0 +1,115 @@
+/* header{
+color: #ddb771;} 
+my google font =
+font-family: 'Francois One', sans-serif;
+font-family: 'Josefin Slab', serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Kaushan Script', cursive; fun
+font-family: 'Fredoka One', cursive; thick fun
+font-family: 'Orbitron', sans-serif; square
+font-family: 'Luckiest Guy', cursive; fun large
+font-family: 'Gloria Hallelujah', cursive; v-fun
+font-family: 'Open Sans', sans-serif;
+
+colors
+
+#550527 : purple
+green: #688e26;
+gold: #faa613;
+orange: #f44708;
+red: #410702;;
+*/
+/* helper */
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../img/bible-blur-small.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+/* header .col-md-8{
+  opacity: 0;
+  animation: fade-in 2s .5s ease-out forwards;
+}
+header .col-md-4{
+  opacity: 0;
+  animation: fade-in 3s 1s ease-out forwards;
+} */
+.height-90 {
+  min-height: 90vh;
+}
+.height-100 {
+  min-height: 100vh;
+}
+
+.navbar {
+  transition: all 0.4s ease-out;
+}
+.spin-icon {
+  position: absolute;
+  bottom: 3rem;
+  left: calc(50% - 20px);
+}
+.underline {
+  width: 100px;
+  margin: auto;
+  height: 5px;
+}
+.parallax {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.parallax:nth-child(1) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../img/bg-chair.jpeg);
+}
+.parallax:nth-child(2) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../img/podium.jpeg);
+}
+.icon {
+  border-radius: 50%;
+  height: 5.5rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
+  width: 5.5rem;
+}
+.bg-blue {
+  background-image: url(../img/pattern_2.svg), linear-gradient(#1a0241, #221346);
+  background-size: cover;
+}
+#contact {
+  background: url(../img/pic_5.jpg) no-repeat fixed;
+  background-size: cover;
+}
+.clip-path {
+  background: rgba(255, 255, 255, 0.8);
+}
+.form-control {
+  border: 0;
+  padding: 0.7rem 1rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+@media screen and (min-width: 570px) {
+  /* sm */
+}
+@media screen and (min-width: 760px) {
+  /* md */
+}
+@media screen and (min-width: 992px) {
+  /* lg */
+  header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url(../img/bible-blur.jpg);
+  }
+  .clip-path {
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+    padding-left: 10%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  /* xl */
+}

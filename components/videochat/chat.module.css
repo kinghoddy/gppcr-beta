@@ -1,0 +1,39 @@
+.iframe {
+  width: 100%;
+  background: #fff;
+  height: calc(100vh - 4rem);
+  position: relative;
+  overflow: hidden;
+}
+.iframe iframe {
+  top: -2rem;
+  position: relative;
+  width: 100%;
+  height: calc(100% + 2rem);
+  border: 0 !important ;
+}
+.brand {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  background: none;
+  padding: 0.6rem 2rem 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+.brand h5 {
+  margin: 0;
+  font-weight: 600;
+}
+.brand img {
+  height: 2rem;
+  margin-right: 1rem;
+}
+
+@media only screen and (min-width: 760px) {
+  .iframe {
+    /* height: 35rem; */
+  }
+}

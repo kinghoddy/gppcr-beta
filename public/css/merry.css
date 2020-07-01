@@ -1,0 +1,379 @@
+@import url(main.css);
+
+* {
+  transition: all 0s;
+}
+
+body {
+  overflow: hidden;
+  height: 100vh;
+}
+
+nav {
+  background: white;
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+  position: fixed;
+  top: 4rem;
+  right: 5rem;
+  z-index: 1000;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+#navBar {
+  fill: #222;
+  height: 2rem;
+}
+
+ol {
+  visibility: hidden;
+  opacity: 0;
+  z-index: 2000;
+  top: 9rem;
+  right: 9rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  position: fixed;
+  overflow: hidden;
+  background: white;
+  transition: 0.2s;
+}
+
+ol:hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+ol li {
+  height: 4rem;
+  width: 20rem;
+  color: #333;
+}
+
+li:hover {
+  background: #222;
+  color: white;
+}
+
+ol li a {
+  font-size: 1.5rem;
+  color: currentColor;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  padding-left: 2rem;
+  height: 100%;
+}
+
+#navBar:hover ~ ol {
+  visibility: visible;
+  opacity: 1;
+}
+
+.logo-boxes {
+  position: fixed;
+  z-index: 1000;
+  left: 4rem;
+  top: 2rem;
+  width: 17vw;
+}
+
+.logo-boxes img {
+  width: 100% !important;
+}
+
+h1 {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  font-weight: lighter;
+  font-size: 4rem;
+  z-index: 800;
+  color: #ddd;
+  transform: translateX(-50%);
+}
+
+.welcome h2 {
+  width: 50%;
+  text-align: center;
+  font-size: 6rem;
+  font-weight: lighter !important;
+  font-family: cursive !important;
+}
+
+.welcome h2:first-child {
+  font-size: 4rem;
+}
+
+.timer {
+  position: fixed;
+  bottom: 2rem;
+  flex-direction: column;
+  left: 2rem;
+  z-index: 1000;
+}
+
+.timer h3 {
+  color: #eee;
+  font-weight: 400;
+}
+
+.timer-row > div {
+  flex-direction: column;
+  margin: 0 1rem;
+  line-height: 1;
+}
+
+.timer span:first-child {
+  font-size: 5rem;
+  color: orangered;
+  font-weight: 500;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.timer span:last-child {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: white;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  background: #555;
+  overflow: hidden;
+  position: relative;
+}
+
+.day {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  color: white;
+}
+
+.welcome {
+  z-index: 900;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../img/bgc-1.jpg), center / cover rgb(90, 66, 36);
+  flex-direction: column;
+}
+
+.welcome h4 {
+  text-align: center;
+  font-family: cursive !important;
+  position: absolute;
+  top: 2rem;
+  font-size: 3rem;
+  left: auto;
+  font-weight: lighter !important;
+}
+
+.welcome h2 {
+  color: white;
+  background: none;
+}
+
+.purple {
+  background: url(../img/pattern.svg),
+    linear-gradient(rgb(59, 6, 59), rgb(59, 6, 59)) center;
+}
+
+.green {
+  background: url(../img/pattern_2.svg),
+    linear-gradient(rgb(21, 59, 30), rgb(21, 59, 30)) center;
+}
+
+.brown {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/bgc-3.jpg) center;
+  /* background-size: contain !important; */
+}
+
+.image {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)),
+    url(../img/bgc-4.jpg) center;
+}
+
+.bible {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/bible-blur.jpg) center;
+}
+
+article {
+  font-size: 2.3rem;
+  width: 100%;
+  padding: 0 20%;
+  text-align: center;
+  max-height: 40vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: auto;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+article i {
+  font-style: italic;
+}
+
+article::-webkit-scrollbar {
+  width: 9px;
+}
+
+.buttons {
+  z-index: 1000;
+  position: fixed;
+  right: 4rem;
+  bottom: 2rem;
+  display: flex;
+}
+
+.buttons button {
+  margin: 0 5rem;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 4rem;
+  text-transform: capitalize;
+  color: #ccc;
+  position: relative;
+  background: none;
+}
+
+.buttons button::after {
+  transition: all 0.5s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: white;
+  border-radius: 20px;
+  opacity: 0;
+}
+
+button:active::after {
+  opacity: 0.5;
+  transform: scale(2);
+}
+
+#left,
+#right {
+  height: 100vh;
+  width: 10vw;
+  /* background: black; */
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#left > *,
+#right > * {
+  color: white;
+  font-size: 2.5rem !important;
+}
+#left {
+  left: 0;
+}
+
+#right {
+  right: 0;
+}
+
+#curDay {
+  position: fixed;
+  bottom: 15rem;
+  left: 15rem;
+  font-size: 4rem;
+  color: gold;
+  z-index: 1000;
+}
+
+/* tab potrait */
+@media only screen and (max-width: 790px) {
+  html {
+    font-size: 55%;
+  }
+
+  .logo-boxes {
+    width: 17rem;
+  }
+
+  h1 {
+    font-size: 5rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .welcome h4 {
+    top: 15rem;
+  }
+
+  #curDay {
+    bottom: 10rem;
+    left: 2rem;
+    font-size: 3rem;
+  }
+
+  article {
+    width: 90%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .buttons {
+    bottom: 14rem;
+    right: unset;
+    display: none;
+  }
+
+  .buttons button {
+    font-size: 3rem;
+    display: none;
+  }
+
+  .buttons,
+  .timer {
+    transform: translateX(-50%);
+    left: 50%;
+    width: 90%;
+  }
+
+  .timer h3 {
+    color: #aaa;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+
+  .logo-boxes {
+    width: 20rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+    width: 90%;
+  }
+
+  .welcome h2 {
+    width: 90%;
+  }
+
+  .welcome h4 {
+    font-size: 2rem;
+    padding: 0 2rem;
+  }
+}

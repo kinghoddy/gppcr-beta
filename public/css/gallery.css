@@ -1,0 +1,354 @@
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.8);
+
+}
+
+::-webkit-scrollbar {
+  /* background: #222 */
+}
+
+body {
+  background: url('../img/pattern.svg'), linear-gradient(to right bottom, #000, #222);
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.spinner {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar {
+  background-color: #333;
+  padding: .2rem 1rem;
+}
+
+main {
+  /* background: green */
+}
+
+section {
+  padding: 3.2rem 0 5rem 0;
+  min-height: 100vh;
+}
+
+.carousel-inner,
+.carousel-item {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item>* {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.main {
+  height: calc(100vh - 7.5rem);
+}
+
+.carousel {
+  height: 100%;
+  width: 100%;
+}
+
+.others .col {
+  height: calc((100vh - 7.5rem)/2)
+}
+
+/* end of album styling */
+#category .cat-icon {
+  font-size: 1.5rem !important
+}
+
+#category a:hover,
+#category a.active {
+  background: #ccc;
+  box-shadow: none;
+  color: rgb(68, 0, 6) !important
+}
+
+/* video styling */
+
+.movieCon {
+  position: relative;
+  height: auto;
+}
+
+#videoCarousel {
+  height: 20rem;
+  background: #ddd;
+}
+
+video {
+  background: #000
+}
+
+#mainVid {
+  width: 100%;
+  max-height: 40vh;
+}
+
+#mainVid.fscreen {
+  max-height: 100vh !important;
+  height: 100vh !important;
+}
+
+#mainVidCon .description {
+  font-weight: 600;
+  padding: 0 1rem;
+}
+
+#initLayout .feed {
+  background: #ddd
+}
+
+.feed figure,
+.feed .ads {
+  height: 6rem;
+  background: #fff;
+  transition: .2s;
+}
+
+
+
+.feed figure.active {
+  background: #efefef;
+
+}
+
+.feed figure:hover {
+  background: #e2e1e1;
+  cursor: pointer;
+}
+
+
+
+.feed video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.feed figcaption {
+  font-weight: 700;
+  font-size: .9rem;
+}
+
+.feed_sm {
+  height: 8rem;
+  background: #ddd
+}
+
+#controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, .8));
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* .movieCon:hover #controls, */
+#controls.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+#volumeBtn.active {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+#volumeSlider {
+  transform: rotateZ(-90deg);
+  position: absolute !important;
+  right: -20%;
+  bottom: 50%;
+  height: 100px !important;
+  width: 250px !important;
+  background: none;
+  display: inline-block;
+}
+
+.playBtn {
+  font-size: 2.5rem;
+  background: none;
+  color: white;
+  border: 0;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /* background: rgba(0, 0, 0, 0.8); */
+  width: 100%;
+  padding: 1rem .5rem;
+}
+
+.movieCon button {
+  background: none;
+  outline: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  color: #ccc;
+  font-size: 1.5rem;
+}
+
+button:focus {
+  outline: 0 !important;
+
+}
+
+.top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: .3rem
+}
+
+#volumeBtn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: .3rem;
+  transition: .3s
+}
+
+#curTime,
+#durTime {
+  font-size: 1rem;
+  font-weight: 400 !important
+}
+
+#durTime {
+  color: #bdbdbd
+}
+
+#rangeSeeker,
+#volumeSlider {
+  -webkit-appearance: none;
+  /* margin: 18px 0; */
+  /* background: linear-gradient(to right, #ff1100 0%, #ff1100 50%, rgba(255,255,255,0.5) 50%, rgba(255, 255, 255, 0.5) 100%); */
+  width: 100%;
+  position: relative;
+  height: 3.5px;
+}
+
+
+#rangeSeeker:hover,
+#volumeSlider:hover {
+  overflow: visible;
+}
+
+#rangeSeeker:focus,
+#volumeSlider:focus {
+  outline: 1px solid transparent;
+  outline-offset: .2rem;
+}
+
+#rangeSeeker::-webkit-slider-runnable-track,
+#volumeSlider::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  border-radius: 25.3px;
+}
+
+#rangeSeeker::-webkit-slider-thumb,
+#volumeSlider::-webkit-slider-thumb {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  cursor: w-resize;
+  -webkit-appearance: none;
+  margin-top: -5px;
+  background: #3ace00;
+}
+
+#volumeSlider::-webkit-slider-thumb {
+  height: 10px;
+  width: 10px;
+  margin-top: -3px;
+}
+
+#rangeSeeker:focus::-webkit-slider-runnable-track {
+  /* background: #aaa; */
+}
+
+#rangeSeeker::-moz-range-track #volumeSlider::-moz-range-track {
+  width: 100%;
+  height: 0px;
+  cursor: pointer;
+  animate: 0.2s;
+  border-radius: 10.3px;
+}
+
+#rangeSeeker::-moz-range-thumb #volumeSlider::-moz-range-thumb {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #ff1100;
+  border: 0;
+  cursor: w-resize;
+}
+
+
+
+@media only screen and (min-width : 1030px) {
+  #mainVid {
+    max-height: 31rem;
+  }
+
+  #initLayout .feed {
+    /* height: 15rem; */
+  }
+
+  .feed figure,
+  .feed .ads {
+    height: 7rem;
+    background: #fff;
+  }
+
+  #rangeSeeker,
+  #volumeSlider {
+    overflow: hidden;
+  }
+
+  #controls {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .6) 89%, rgba(0, 0, 0, .9));
+
+  }
+
+  #volumeBtn {
+    position: static;
+    margin: unset;
+  }
+
+}
+
+@media only screen and (min-width : 1400px) {
+  #mainVid {
+    max-height: 34rem;
+  }
+}

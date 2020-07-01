@@ -1,0 +1,108 @@
+.navbar {
+  background: white;
+  padding: 0 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand img {
+  height: 3rem;
+}
+
+.body {
+  display: flex;
+  background: #ccc;
+  margin-top: 4.2rem;
+}
+
+.gif {
+  height: 5rem;
+  margin: 2rem auto;
+}
+
+main {
+  flex: 1;
+  min-width: 190px;
+}
+
+header {
+  border-radius: 10px;
+}
+
+section {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+figure video {
+  width: 100%;
+  background: black;
+}
+
+.img-box {
+  border-radius: 50%;
+  overflow: hidden;
+  height: 3rem !important;
+  padding: 0 !important;
+  flex: 0 0 3rem !important;
+}
+
+section figure {
+  background: #555
+}
+
+section figcaption {
+  background: #fff
+}
+
+.img-box img {
+  object-fit: cover !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-position: center !important;
+}
+
+/* socials */
+.eafc-chat-window-containerFloating,
+.dodbP,
+.gBJupo,
+.eawc-chat-window-containerFloating {
+  position: relative !important;
+}
+
+.eafc-chat-window-window.jsx-863339773,
+.bSJysN,
+.eafc-chat-window-window.jsx-2445383643 {
+  width: 19rem !important;
+  left: -2rem !important;
+}
+
+.eapps-widget-toolbar {
+  display: none !important;
+}
+
+div.eapps-widget a:last-child {
+  width: 0 !important;
+  max-height: 0 !important;
+  overflow: hidden !important;
+}
+
+.eawc-chat-window-containerAlignLeft .eawc-chat-window-window {
+  left: -13rem !important;
+  width: 19rem !important;
+}
+
+/* facebook */
+.fb_iframe_widget_fluid {}
+
+.UFIInputContainer,
+.UFIMentionsInputWrap,
+.UFICommentContainer {
+  border-radius: 50px !important;
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.3) !important;
+}
+
+.UFIInputContainer>div {
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.3) !important;
+  border: 0 !important;
+}

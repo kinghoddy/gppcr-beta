@@ -1,0 +1,78 @@
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../img/desk-1.jpg);
+}
+.body {
+  display: flex;
+  margin-top: 4rem;
+  height: calc(100vh - 4rem);
+  overflow-x: hidden;
+}
+
+.collapsed {
+  margin-left: -80%;
+}
+main {
+  overflow-y: auto;
+  flex: 1;
+  min-width: 280px;
+  height: calc(100vh - 4rem);
+}
+.navbar {
+  background: white;
+  padding: 0 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+.navbar-brand img {
+  height: 3rem;
+}
+.card::after,
+.card::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  height: 100%;
+  width: 1.3rem;
+  background: linear-gradient(
+    to right,
+    rgba(17, 6, 6, 0.07),
+    rgba(0, 0, 0, 0.01),
+    transparent
+  );
+}
+.card::after {
+  transform: rotateY(180deg);
+  right: 0;
+}
+.card-author-img {
+  width: 7rem;
+  border-radius: 50%;
+  overflow: hidden;
+  height: 7rem;
+}
+.card-body {
+  height: 12.5rem;
+  overflow: hidden;
+}
+@media screen and (min-width: 760px) {
+  /* md */
+  #sidenav {
+    flex: 0 0 40%;
+  }
+  .collapsed {
+    margin-left: -40%;
+  }
+}
+@media screen and (min-width: 992px) {
+  /* lg */
+  #sidenav {
+    flex: 0 0 20%;
+  }
+  .collapsed {
+    margin-left: -20%;
+  }
+}
+.card-body span,
+article span {
+  color: rgb(221, 166, 14);
+}

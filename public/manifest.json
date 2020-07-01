@@ -1,0 +1,14 @@
+{
+  "short_name": "GPPCR",
+  "name": "Great physician pentecostal church or redeemer",
+  "icons": [
+    {
+      "src": ".img/logo/logo.png",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#273",
+  "background_color": "#273"
+}

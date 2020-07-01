@@ -1,0 +1,12 @@
+[
+  {
+    "id": "",
+    "title": "gppcr",
+    "content": "<div class=\"owl-carousel pt-4 owl-theme\"> <div><img src=\"../img/gallery.jpg\" class=\"img-fluid\" > <a href=\"gallery.html\" class=\"btn btn-outline-warning btn-sm mt-3\">View Page</a> </div> <div> <img src=\"../img/daily.jpg\" class=\"img-fluid\" > <a href=\"../daily-blessings.html\" class=\"btn btn-outline-warning btn-sm mt-3\">View Page</a> </div> </div>"
+  },
+  {
+    "id": "",
+    "title": "Start a live chart with us",
+    "content": " <div class=\"row pt-5 text-center\"> <div class=\"col\"> <h4 class=\" h5 text-capitalize font-weight-bold\">stat a live chart with us</h4> </div> </div> <div class=\"row py-3\"> <div class=\"col\"> <div class=\"elfsight-app-b678dadf-16ec-4b46-b557-e6b6f2bb3bc7 col-6\"></div> </div> <div class=\"col\"> <div class=\"elfsight-app-b6c142f5-a479-4825-9bfc-ba83f6436219 col-6\"></div> </div> </div>  "
+  }
+]

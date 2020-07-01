@@ -1,0 +1,49 @@
+[
+  {
+    "id": "aop",
+    "logo": "logo/gppcr-logo.png",
+    "header": "Atmosphere of praise",
+    "date": "April 1, 2020",
+    "subHeader": "An april full of worship",
+    "description": "",
+
+    "figure": "<a class=\"image-link\" href=\"../img/aop.jpeg\"><img src='../img/aop.jpeg' alt='atmosphere of praise' class='img-fluid' /></a>",
+    "href": "../img/aop.jpeg",
+    "caption": "<a class='btn-outline-dark btn btn-block' href='../aop'>Go to page</a>"
+  },
+  {
+    "id": "carol",
+    "logo": "logo/gppcr-logo.png",
+    "header": "GPPCR youth carol 2019",
+    "date": "December 3, 2019",
+    "subHeader": "GPPCR youths",
+    "description": "",
+
+    "figure": "<div class='parent-con row'> <div class='col-6 p-0' style='border-right:2px solid #555'> <a href='../img/carol.jpg' class='imagelink'> <img src='../img/carol.jpg' alt='carol' class='img-fluid'> </a> </div> <div class='col-6 p-0' style='border-left:2px solid #555'> <a href='../img/carol-2.png' class='imagelink'> <img src='../img/carol-2.png' alt='carol' class='img-fluid'> </a> </div> </div>",
+    "href": "../img/praise.jpg",
+    "caption": "<a class='btn-outline-dark btn btn-block' href='gallery.html'>See more photos</a>"
+  },
+  {
+    "id": "praise",
+    "logo": "logo/gppcr-logo.png",
+    "header": "40 days praise challenge",
+    "date": "11th, november, 2019 ",
+    "subHeader": "Season 2",
+    "description": "Praise looks good on you. Be part of the believers that will Shake Heavens with Praise and Worship as the year runs to an end. Join our PRAISE CHALLENGE Season 2. Your Praise and Worship can perform a lot of wonders. Join us this season as we raise TEN MILLION Army to Praise His Majesty for forty days in Praise Challenge Season 2. <strong>November 11 to December 20 , 2019</strong>",
+
+    "figure": "<a class=\"image-link\" href=\"../img/praise.jpeg\"><img src='../img/praise.jpeg' alt='praise challenge' class='img-fluid' /></a>",
+    "href": "../img/praise.jpg",
+    "caption": "<a class='btn-outline-dark btn btn-block' href='../praisechallenge/index.html'>Check it out</a>"
+  },
+  {
+    "id": "praise1",
+    "logo": "logo/gppcr-logo.png",
+    "header": "31 days praise challenge",
+    "date": "June 12, 2019",
+    "subHeader": "Season 1",
+    "description": "Checkout the mading edition of our praise challenge ",
+    "figure": "",
+    "href": "../img/bg-1.jpg",
+    "caption": "<a class='btn-outline-dark btn btn-block' href='praise-challenge.html'>Check it out</a>"
+  }
+]
