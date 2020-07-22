@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-
+import firebase from "../firebase";
+import "firebase/database";
 export default (props) => {
   let date;
   var weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -59,6 +60,27 @@ export default (props) => {
     e.preventDefault();
     setShouldReadMore(!shouldReadMore);
   };
+  const deletePost = (pid) => {
+    console.log(pid);
+    const ref = firebase.database().ref(pid);
+    ref.once("value", (s) => {
+      let name = s.val().username;
+      let comment = s.val().comment.split("<br/>").join("\n");
+      if (s.val().src) {
+        comment += "\n You uploaded an audio";
+      }
+
+      const q = confirm(
+        "Dear " +
+          name +
+          " \n Are you sure you want to delete this post ? \n This action cannot be reversed \n \n Your comment \n " +
+          comment
+      );
+      if (q) {
+        ref.remove();
+      }
+    });
+  };
   const rMore = (text) => {
     const t = (
       <React.Fragment>
@@ -81,7 +103,15 @@ export default (props) => {
     <div className="wrapper">
       <img src={props.profilePicture} alt="" />
       <div className="content " style={{ flex: 1 }}>
-        <h5>{props.username}</h5>
+        <div className="justify-content-between d-flex align-items-center">
+          <h5 className="mb-0">{props.username}</h5>
+          <button
+            className="btn bg-none"
+            onClick={() => deletePost(props.deleteRef)}
+          >
+            <i className="fa fa-trash"></i>
+          </button>
+        </div>
         <div className="m-2">
           {props.comment && rMore(props.comment)}
           {props.src && (

@@ -36,6 +36,7 @@ export default class PCPost extends React.Component {
           for (let key in s.val()) {
             c.push({
               ...s.val()[key],
+              deleteRef: "pc/" + this.props.id + "/comments/" + key,
               key,
             });
           }
@@ -71,7 +72,7 @@ export default class PCPost extends React.Component {
             comment: "",
             name: "",
           };
-          this.setState({ commentForm: f });
+          this.setState({ commentForm: f, completed: true });
         });
       });
     } else {

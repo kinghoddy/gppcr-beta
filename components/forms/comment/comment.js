@@ -13,7 +13,6 @@ export default (props) => {
     const recorder = document.createElement("input");
     recorder.accept = "audio/*";
     recorder.type = "file";
-    recorder.setAttribute("capture", true);
     recorder.click();
     console.log(recorder);
     recorder.addEventListener("change", (e) => {
@@ -33,7 +32,10 @@ export default (props) => {
         setUserExists(false);
       }
     });
-  }, []);
+    if (props.completed && localSrc) {
+      setLocalSrc(null);
+    }
+  }, [props.completed]);
 
   const userForm = (
     <form
@@ -139,7 +141,6 @@ export default (props) => {
             setFocused(true);
           }}
           rows={focused ? 3 : 1}
-          required
           onChange={(e) => {
             props.changed(e, "comment");
           }}
@@ -154,20 +155,46 @@ export default (props) => {
           <i className="fad fa-microphone"></i>
         </button>
       </div>
-      {localSrc && <audio src={localSrc} autoPlay controls></audio>}
 
-      {props.comment && (
-        <button
-          type="button"
-          className="btn animated bounceIn rounded-circle btn-lg btn-info ml-3"
-          onClick={props.addAudio}
-        >
-          <i className="fad fa-microphone"></i>
-        </button>
-      )}
-      <button type="submit" className="btn btn-success btn-block">
-        ADD COMMENT
-      </button>
+      {props.completed
+        ? null
+        : localSrc && <audio src={localSrc} autoPlay controls></audio>}
+      {props.comment || localSrc ? (
+        props.uploading ? (
+          <div
+            className="p-2 w-100"
+            style={{ boxShadow: "0 5px 10px rgba(0,0,0,.15)" }}
+          >
+            <div className="d-flex justify-content-between">
+              <span style={{ fontSize: ".8rem", color: "#000" }}>
+                {props.fileName}
+              </span>
+              <span style={{ fontSize: ".8rem", color: "#000" }}>
+                {props.fileSize}
+              </span>
+            </div>
+            <div className="d-flex align-items-center">
+              <span
+                className="spinner-border mr-3 text-muted"
+                style={{ height: "15px", width: "15px" }}
+              ></span>
+              <div className={classes.progBar}>
+                <span style={{ width: props.progBarLength }}></span>
+              </div>
+            </div>
+            <span style={{ fontSize: ".8rem", color: "#05a" }}>
+              {props.progressMessage}
+            </span>
+          </div>
+        ) : (
+          <button
+            type="submit"
+            className="animated  bounceIn btn btn-success btn-block"
+          >
+            ADD COMMENT
+          </button>
+        )
+      ) : null}
       <Link href="/login">
         <a>You can also login to have a better commenting experience</a>
       </Link>
