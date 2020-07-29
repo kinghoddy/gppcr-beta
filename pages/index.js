@@ -620,9 +620,7 @@ export default class Home extends Component {
         <section id="contact">
           <div class="container-fluid">
             <div class="row">
-              <div
-                class="col-md-6 col-lg-5 py-5 d-flex justify-content-around flex-column align-items-center"
-                style={{ height: "50vh" }}
+              <div class="col-md-6 col-lg-5 py-5 d-flex justify-content-around flex-column align-items-center" style={{ height: "50vh" }}
               >
                 <div class="mapouter wow rubberBand">
                   <div class="gmap_canvas">
@@ -639,9 +637,7 @@ export default class Home extends Component {
                       embedgooglemap.net
                     </a>
                   </div>
-                  <style jsx>
-                    {" "}
-                    {`
+                  <style jsx>{`
                       .mapouter {
                         position: relative;
                         text-align: right;
