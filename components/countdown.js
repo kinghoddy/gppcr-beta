@@ -8,13 +8,13 @@ class CountDown extends React.Component {
       minutes: 0,
       seconds: 0,
     },
-    message: "Challenge Starts in",
+    message: "Praise challenge Completed",
   };
   componentDidMount() {
-    setInterval(() => {
-      const f = new Date(2020, 6, 1);
-      this.CountDown(f.getDate() + 31);
-    }, 1000);
+    // setInterval(() => {
+    //   const f = new Date(2020, 6, 1);
+    //   this.CountDown(f.getDate() + 31);
+    // }, 1000);
   }
   CountDown = (future) => {
     const curDate = new Date();

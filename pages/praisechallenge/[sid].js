@@ -13,19 +13,19 @@ export default class SeasonId extends Component {
   state = {
     posts: [],
     season: 3,
-    Day: 0,
+    Day: 31,
   };
   componentDidMount() {
     this.getPosts();
     this.setState({ season: this.props.sid.split("season")[1] });
-    setInterval(() => {
-      let day = 0;
-      let date = new Date();
-      if (date.getMonth() === 6) {
-        day = date.getDate();
-      }
-      this.setState({ Day: day });
-    }, 1000);
+    // setInterval(() => {
+    //   let day = 0;
+    //   let date = new Date();
+    //   if (date.getMonth() === 6) {
+    //     day = date.getDate();
+    //   }
+    //   this.setState({ Day: day });
+    // }, 1000);
   }
   getPosts = () => {
     this.setState({ loading: true });
@@ -65,7 +65,7 @@ export default class SeasonId extends Component {
             </div>
             <div className="row pane">
               <div className="col text-center">
-                <h5 className="mb-0">Challenge Day {this.state.Day}</h5>
+                <h5 className="mb-0">Praise Challenge Completed</h5>
               </div>
             </div>
           </div>
