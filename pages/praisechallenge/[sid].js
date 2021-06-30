@@ -13,19 +13,19 @@ export default class SeasonId extends Component {
   state = {
     posts: [],
     season: 3,
-    Day: 31,
+    Day: 0,
   };
   componentDidMount() {
     this.getPosts();
     this.setState({ season: this.props.sid.split("season")[1] });
-    // setInterval(() => {
-    //   let day = 0;
-    //   let date = new Date();
-    //   if (date.getMonth() === 6) {
-    //     day = date.getDate();
-    //   }
-    //   this.setState({ Day: day });
-    // }, 1000);
+    setInterval(() => {
+      let day = 0;
+      let date = new Date();
+      if (date.getMonth() >= 10) {
+        day = date.getDate() + (date.getMonth() === 11 ? 30 : 0);
+      }
+      this.setState({ Day: day });
+    }, 1000);
   }
   getPosts = () => {
     this.setState({ loading: true });
@@ -59,22 +59,27 @@ export default class SeasonId extends Component {
                 {this.state.loading && <div className="spinner-grow"></div>}
                 {this.state.loading && <div className="spinner-border"></div>}
               </div>
-              <div className="col-12">
-                <CountDown />
-              </div>
+              {this.props.timer !== "false" && (
+                <div className="col-12">
+                  <CountDown />
+                </div>
+              )}
             </div>
-            <div className="row pane">
-              <div className="col text-center">
-                <h5 className="mb-0">Praise Challenge Completed</h5>
+            {this.props.timer !== "false" && this.state.Day > 0 && (
+              <div className="row pane">
+                <div className="col text-center">
+                  <h5 className="mb-0">Praise Challenge Completed </h5>
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </header>
 
         <section id="bible" className="bg-light py-5">
           <div className="container">
             {this.state.posts.map((cur, i) =>
-              this.state.posts.length - i <= this.state.Day ? (
+              this.state.posts.length - i <= this.state.Day ||
+              this.props.timer === "false" ? (
                 <Post {...cur} day={this.state.posts.length - i} />
               ) : null
             )}

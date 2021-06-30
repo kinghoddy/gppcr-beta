@@ -10,10 +10,10 @@ export default class Pchallenge extends Component {
           <div className="container text-light">
             <div className="row align-items-center">
               <div className="col text-center">
-                <h2 className="text-uppercase">Praise Challenge Season 3</h2>
+                <h2 className="text-uppercase">Praise Challenge Season 4</h2>
                 <Link
-                  href="/praisechallenge/[sid]?sid=season3"
-                  as="/praisechallenge/season3"
+                  href="/praisechallenge/[sid]"
+                  as="/praisechallenge/season4"
                 >
                   <a className="btn btn-warning">Go to challenge</a>
                 </Link>
@@ -64,6 +64,14 @@ export default class Pchallenge extends Component {
               </div>
             </div>
             <div className="row">
+              <div className="col">
+                <Link
+                  href="/praisechallenge/[sid]?timer=false"
+                  as="/praisechallenge/season3?timer=false"
+                >
+                  <a className="btn btn-warning">Season 3</a>
+                </Link>
+              </div>
               <div className="col">
                 <a
                   target="blank"

@@ -11,7 +11,7 @@ class Add extends React.Component {
   state = {
     formData: {
       instruction: "",
-      season: "season3",
+      season: "season4",
       contentEn: "English passage",
       contentYou: "Yoruba passage",
       passageEn: "",
@@ -83,6 +83,7 @@ class Add extends React.Component {
                 onChange={(e) => this.changed(e, "season")}
                 className="form-control mb-3"
               >
+                <option value="season4">Season 4</option>
                 <option value="season3">Season 3</option>
               </select>
               <input

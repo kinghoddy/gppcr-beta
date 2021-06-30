@@ -75,7 +75,7 @@ export default class Pc extends Component {
           <Link href="/admin/pc/add-post">
             <a className="btn btn-dark">Add new passage</a>
           </Link>
-          {Posts}
+          {Posts.reverse()}
         </div>
       </Layout>
     );
