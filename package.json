@@ -13,7 +13,7 @@
     "ckeditor4-react": "^1.1.1",
     "firebase": "^7.15.4",
     "jquery": "^3.5.1",
-    "next": "9.3.5",
+    "next": "11.1.3",
     "react": "16.13.1",
     "react-dom": "16.13.1"
   }
